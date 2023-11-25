@@ -10,7 +10,7 @@
     <div class="container">
         <h1>Enter Card Details</h1>
         <div id="cardContainer">
-            <form class="cardForm">
+            <form class="cardForm" action="{{ url_for('Add_card')}}">
                 <label for="cardName">Card Name:</label>
                 <input type="text" id="cardName" required>
 

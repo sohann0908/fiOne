@@ -30,6 +30,14 @@ def index():
      return jsonify(rows)
 
 
+@app.route('/Add_card')
+def AddCard():
+     cur = mysql.connect.cursor()
+     print(request.form.get("cardNumber"))
+     return "hello"
+
+
+
 
 
 
