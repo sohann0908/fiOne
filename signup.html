@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Card Details</h1>
+        <div id="cardContainer">
+            <form class="cardForm">
+                <label for="cardName">Card Name:</label>
+                <input type="text" id="cardName" required>
+
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" required pattern="[0-9]{16}">
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required pattern="[0-9]{3}">
+
+                <label for="expiryMonth">Expiry Month:</label>
+                <input type="text" id="expiryMonth" required pattern="[0-9]{1,2}">
+
+                <label for="expiryYear">Expiry Year:</label>
+                <input type="text" id="expiryYear" required pattern="[0-9]{4}">
+
+                <label for="minLimit">Minimum Limit:</label>
+                <input type="text" id="minLimit" required pattern="[0-9]+(\.[0-9]{1,2})?">
+            </form>
+        </div>
+        <button type="button" onclick="addCard()">Add Card</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
