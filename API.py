@@ -22,20 +22,14 @@ mysql = MySQL(app)
 
 @app.route('/')
 def index():
+     return render_template("signup.html")
+
+
+@app.route('/Add_card',methods=['POST'])
+def Add_card():
      cur = mysql.connect.cursor()
-     cur.execute("SELECT * FROM USERS")
-     rows = cur.fetchall()
-     print(rows)
-     cur.close()
-     return jsonify(rows)
-
-
-@app.route('/Add_card')
-def AddCard():
-     cur = mysql.connect.cursor()
-     print(request.form.get("cardNumber"))
-     return "hello"
-
+     print(request.form.get("CardNumber"))
+     return  render_template("index.html")
 
 
 

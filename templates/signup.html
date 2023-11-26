@@ -4,35 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Details</title>
-    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <div class="container">
         <h1>Enter Card Details</h1>
         <div id="cardContainer">
-            <form class="cardForm" action="{{ url_for('Add_card')}}">
+            <form class="cardForm" action="{{ url_for('Add_card')}}" method = "post">
                 <label for="cardName">Card Name:</label>
                 <input type="text" id="cardName" required>
 
                 <label for="cardNumber">Card Number:</label>
-                <input type="text" id="cardNumber" required pattern="[0-9]{16}">
+                <input type="text" id="cardNumber"  name="CardNumber">
 
                 <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" required pattern="[0-9]{3}">
+                <input type="text" id="cvv" >
 
                 <label for="expiryMonth">Expiry Month:</label>
-                <input type="text" id="expiryMonth" required pattern="[0-9]{1,2}">
+                <input type="text" id="expiryMonth" >
 
                 <label for="expiryYear">Expiry Year:</label>
-                <input type="text" id="expiryYear" required pattern="[0-9]{4}">
+                <input type="text" id="expiryYear" >
 
                 <label for="minLimit">Minimum Limit:</label>
-                <input type="text" id="minLimit" required pattern="[0-9]+(\.[0-9]{1,2})?">
+                <input type="text" id="minLimit">
+                <button type="submit" >Add Card</button>
             </form>
         </div>
-        <button type="button" onclick="addCard()">Add Card</button>
+        
     </div>
 
-    <script src="app.js"></script>
+    <script>    
+        
+    </script>
 </body>
 </html>
