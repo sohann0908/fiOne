@@ -2,6 +2,13 @@ import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 function form(){
+
+    const handleClick = () => {
+        fetch("")
+        .then((res)=>res.json())
+        .then(console.log(res));
+    }
+
     return(
         <>
       <Container className="my-4">
@@ -46,7 +53,7 @@ function form(){
             </Col>
 
             <Col md={6}>
-              <Button variant="primary" type="button">
+              <Button variant="primary" type="button" onClick={handleClick}>
                 Submit
               </Button>
             </Col>
